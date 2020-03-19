@@ -1,5 +1,19 @@
+h1 {
+    /* position: fixed; */
+    font-family: 'Alfa Slab One';
+}
+
+.play {
+    position: static;
+}
 #actor-list{
     background-color: burlywood;
+    min-height: 50px;
+}
+
+#movie-reviews{
+    background-color: rgb(240, 185, 114);
+    min-height: 50px;
 }
 
 #giphy-col{
