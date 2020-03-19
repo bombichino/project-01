@@ -14,35 +14,38 @@
     <script src='script.js'></script>
 </head>
 <body>
+       
     <div>
-        <h1 style="float: left;">StanBase</h1>
+      <!-- website title -->
+      <h1 style="float: left;">StanBase</h1>
         <i class="fas fa-caret-square-right" id="play" style="color: rgb(28, 134, 28);"></i>
-    </div>
-    <div class="pos-f-t" style="float: right;" style="position: absolute;">
-        <div class="collapse" id="navbarToggleExternalContent">
-          <div class="bg-dark p-4">
-            <h5 class="text-white h4">Collapsed content</h5>
-            <span class="text-muted">Toggleable via the navbar brand.</span>
+
+        <!-- collapsible nav bar code start -->
+        <div class="pos-f-t" style="float: right;" style="position: absolute;">
+          <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-light p-4">
+              <h5 class="text-white h4">Collapsed content</h5>
+              <span class="text-muted">Toggleable via the navbar brand.</span>
+            </div>
           </div>
+          <nav class="navbar navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </nav>
         </div>
-        <nav class="navbar navbar-dark bg-dark">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </nav>
+        <!-- collapsible nav bar code end -->
     </div>
-    <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <button class="input-group-text" id="inputGroup-sizing-default" id="movie-search">Movie Title</button>
-        </div>
-        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-    </div>
+ 
     <div class="container">
+      <!-- search bar code -->
+      <div class="row">
+        <input type="text" class="form-control">
+      </div>
+      <!-- actor buttons -->
       <div class="row">
         <div class="col-4">
           <div id="actor-list" style="text-align: center;">actor buttons list</div>
-          <!-- <button class="moviebutton" onclick="MoviePull()">MovieButton</button> -->
-          <!-- <input class="movieinput"> -->
           <div id="movietitle"></div>
           <button id = "actor1" style="visibility:hidden"></button>
           <button id = "actor2" style="visibility:hidden"></button>
@@ -50,18 +53,26 @@
           <button id = "actor4" style="visibility:hidden"></button>
           <button id = "actor5" style="visibility:hidden"></button>
         </div>
-        <div class="col-8">
-          <div id="movie-reviews">movie reviews</div>
+      </div>
+      <div class="row">
+        <!-- giphy -->
+        <div class="col-md-5" id="giphy-col">
+          giphy
+        </div>
+        <!-- nyt article search -->
+        <div class="col-md-5" id="nyt-col">
         </div>
       </div>
       <div class="row">
-        <div class="col md-6" id="giphy-col">
-          giphy
-        </div>
-        <div class="col md 6" id="nyt-col">
-        </div>
+          <!-- nyt movie review -->
+          <div class="col-md-5" id="movie-reviews">
+            movie reviews
+          </div>
+          <!-- twitter -->
+          <div class="col-md-5" id="twitter-col">
+            twitter
+          </div>
       </div>
-    </div>
   
 </body>
 </html>
