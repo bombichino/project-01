@@ -35,6 +35,7 @@ $.ajax({
     console.log(title);
     var MovieQuery = "https://www.omdbapi.com/?t=" + title + "&apikey=d58d1281";
     console.log(MovieQuery);
+    
     $.ajax({
       url: MovieQuery,
       method: "GET"
@@ -78,7 +79,10 @@ $.ajax({
             $("#actor5").text(ActorsList[4]);}
         else {}
         };
-    })}
-
-
+    });
+  };
   
+
+$("#movie-search").click(function() {
+  MoviePull();
+});
