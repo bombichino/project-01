@@ -7,9 +7,23 @@ h1 {
     position: static;
 }
 
+.actorBtn{
+    background-color: cornsilk;
+    font-family: 'Alfa Slab One';
+    margin: 5px;
+}
+
 #actor-list{
     background-color: burlywood;
     min-height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#actor-list-heading{
+    text-decoration: underline;
+    font-size: x-large;
+    font-family: 'Alfa Slab One';
 }
 
 #movie-reviews{
