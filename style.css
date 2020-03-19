@@ -7,6 +7,10 @@ h1 {
     position: static;
 }
 
+#movie-search-bar{
+    position: relative;
+}
+
 .actorBtn{
     background-color: cornsilk;
     font-family: 'Alfa Slab One';
