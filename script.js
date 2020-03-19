@@ -23,7 +23,6 @@ $.ajax({
   }).then(function(response) {
 
     for (i=0; i<5;i++) {
-    console.log(response.response.docs[i].abstract);
     $("#nyt-col").append(JSON.stringify(response.response.docs[i].abstract));  
     $("#nyt-col").append("<br>"); 
     $("#nyt-col").append("<br>"); 

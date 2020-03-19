@@ -12,6 +12,7 @@ h1 {
     font-family: 'Alfa Slab One';
     margin: 5px;
 }
+
 #actor-list{
     background-color: burlywood;
     min-height: 50px;
@@ -27,15 +28,20 @@ h1 {
 
 #movie-reviews{
     background-color: rgb(240, 185, 114);
-    min-height: 50px;
+    margin:10px;
 }
 
 #giphy-col{
     background-color: cadetblue;
-    margin: 20px;
+    margin:10px;
 }
 
 #nyt-col{
     background-color: cornflowerblue;
-    margin: 20px;
+    margin:10px;
+}
+
+#twitter-col{
+    background-color: tomato;
+    margin:10px;
 }
