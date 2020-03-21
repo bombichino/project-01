@@ -1,14 +1,27 @@
-h1 {
+body,html {
+    height:100%
+}
+.main {
+    background-image: url("bg-opening.jpg");
+    height:100%;
+}
+
+h2 {
     /* position: fixed; */
     font-family: 'Alfa Slab One';
+    display:inline;
 }
 
-.play {
-    position: static;
-}
+#tagline {
 
-#movie-search-bar{
-    position: relative;
+ font-family: 'Alfa Slab One';
+ background-color: white;
+}
+#upper-tag {
+font-size: 200%;
+}
+#lower-tag {
+    font-size: 100%;
 }
 
 .actorBtn{
@@ -18,8 +31,6 @@ h1 {
 }
 
 #actor-list{
-    background-color: burlywood;
-    min-height: 50px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -35,7 +46,7 @@ h1 {
 }
 
 #movie-reviews{
-    background-color: rgb(240, 185, 114);
+    /* background-color: rgb(240, 185, 114); */
     margin:10px;
     font-family: 'Alfa Slab One';
 }
@@ -44,17 +55,18 @@ h1 {
     font-family: 'Alfa Slab One';
 }
 
-#giphy-col{
-    background-color: cadetblue;
+#giphy-col, #giphy-title{
+    /* background-color: cadetblue; */
+    font-family: 'Alfa Slab One';
     margin:10px;
 }
 
 #nyt-col{
-    background-color: cornflowerblue;
+    /* background-color: cornflowerblue; */
     margin:10px;
 }
 
 #twitter-col{
-    background-color: tomato;
+    /* background-color: tomato; */
     margin:10px;
 }

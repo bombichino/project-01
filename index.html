@@ -13,73 +13,76 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-       
-    <div>
+ <div class="main" id="main-wrapper">
       <!-- website title -->
-      <h1 style="float: left;">StanBase</h1>
-        <i class="fas fa-caret-square-right" id="play" style="color: rgb(28, 134, 28);"></i>
+  <nav class="navbar navbar-light bg-light">  
 
-        <!-- collapsible nav bar code start -->
-        <div class="pos-f-t" style="float: right;" style="position: absolute;">
-          <div class="collapse" id="navbarToggleExternalContent">
-            <div class="bg-light p-4">
-              <h5 class="text-white h4">Collapsed content</h5>
-              <span class="text-muted">Toggleable via the navbar brand.</span>
-            </div>
+    <a class="navbar-brand m-0" href="index.html">
+      <h2>StanBase
+      <i class="fas fa-caret-square-right" style="color: rgb(28, 134, 28);"></i></h2>
+    </a>
+      <!-- collapsible nav bar code start -->
+      <div class="pos-f-t" style="float: right;" style="position: absolute;">
+        <div class="collapse" id="navbarToggleExternalContent">
+          <div class="bg-light p-4">
+            <h5 class="text-white h4">Collapsed content</h5>
+            <span class="text-muted">Toggleable via the navbar brand.</span>
           </div>
-          <nav class="navbar navbar-light bg-light">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          </nav>
         </div>
+      </div>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
         <!-- collapsible nav bar code end -->
-    </div>
-    <br>
-    <br>
-    <div class="container">
-      <!-- search bar code -->
-      <div class="row mx-auto input-group" id="movie-search-bar">
-        <input type="text" class="form-control" id="movieInput">
+  </nav>
+  <div class="container">
+
+    <!-- search bar code -->
+    <div class="row justify-content-center p-5" id="movie-search-bar">
+      <div class="col-md-8 input-group">
+        <input type="text" class="form-control" placeholder="Search a movie title..." id="movie-input">
         <div class="input-group-append">  
-          <button class="input-group-text" id="movieSearchBtn">Search Movie Titles</button>
+          <button class="input-group-text" id="movieSearchBtn">Search</button>
         </div>
-      </div>
-      <br>
-      <!-- actor buttons -->
-      <div class="row justify-content-center">
-        <div class="col-5">
-          <div class="container" id="actor-list" style="text-align: center;">
-            <p id="actor-list-heading">Stan your pick:</p>
-            <hr>
-              <button id = "actor1" style="visibility:hidden" class="actorBtn btn btn-outline-secondary"></button>
-              <button id = "actor2" style="visibility:hidden" class="actorBtn btn btn-outline-secondary"></button>
-              <button id = "actor3" style="visibility:hidden" class="actorBtn btn btn-outline-secondary"></button>
-              <button id = "actor4" style="visibility:hidden" class="actorBtn btn btn-outline-secondary"></button>
-          </div>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <!-- nyt article search -->
-        <div class="col-md-5" id="nyt-col"></div>
-        <!-- nyt movie review -->
-        <div class="col-md-5" id="movie-reviews">movie reviews</div>
-      </div>
-      <div class="row justify-content-center">
-          <!-- giphy -->
-          <div class="col-md-6" id="giphy-col">
-            <img id = "picture1" style="visibility:hidden">
-            <img id = "picture2" style="visibility:hidden">
-            <img id = "picture3" style="visibility:hidden">
-            <img id = "picture4" style="visibility:hidden">
-            <img id = "picture5" style="visibility:hidden">
-          </div>
-      </div>
-          <!-- twitter -->
-      <div class="row justify-content-center">
-          <div class="col-md-5" id="twitter-col">twitter</div>
+      
       </div>
     </div>
-      <script src='script.js'></script>
+
+    <br>
+
+    <!-- actor buttons -->
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="container" id="actor-list" style="text-align: center;">
+          <div class="rounded p-1" id="tagline">
+           <p id="upper-tag">Stan your pick!</p>
+           <p id="lower-tag">Get latest news, giphy's and movie reviews about movie actors</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <!-- nyt article search -->
+      <div class="col-md-5" id="nyt-col"></div>
+      <!-- nyt movie review -->
+      <div class="col-md-5" id="movie-reviews"></div>
+    </div>
+    <div class="row justify-content-center" id="giphy">
+        <!-- giphy -->
+        <div class="row" id="giphy-title"></div>
+        <div class="row" id="giphy-col"></div>
+    </div>
+    <div class="row justify-content-center">
+        <!-- twitter -->
+        <div class="col-md-12" id="twitter-col">        
+        </div>
+    </div>
+  </div>
+
+</div>
+
+<script src='script.js'></script>
+
 </body>
 </html>
