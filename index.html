@@ -35,18 +35,20 @@
         </div>
         <!-- collapsible nav bar code end -->
     </div>
- 
+    <br>
+    <br>
     <div class="container">
       <!-- search bar code -->
-      <div class="row input-group" id="movie-search-bar" style="max-width: 500px;">
+      <div class="row mx-auto input-group" id="movie-search-bar">
         <input type="text" class="form-control" id="movieInput">
         <div class="input-group-append">  
           <button class="input-group-text" id="movieSearchBtn">Search Movie Titles</button>
         </div>
       </div>
+      <br>
       <!-- actor buttons -->
-      <div class="row">
-        <div class="col-4">
+      <div class="row justify-content-center">
+        <div class="col-5">
           <div class="container" id="actor-list" style="text-align: center;">
             <p id="actor-list-heading">Stan your pick:</p>
             <hr>
@@ -54,30 +56,30 @@
               <button id = "actor2" style="visibility:hidden" class="actorBtn btn btn-outline-secondary"></button>
               <button id = "actor3" style="visibility:hidden" class="actorBtn btn btn-outline-secondary"></button>
               <button id = "actor4" style="visibility:hidden" class="actorBtn btn btn-outline-secondary"></button>
-      </div>
-      <div class="row">
-        <!-- giphy -->
-        <div class="col-md-5" id="giphy-col">
-          <img id = "picture1" style="visibility:hidden">
-          <img id = "picture2" style="visibility:hidden">
-          <img id = "picture3" style="visibility:hidden">
-          <img id = "picture4" style="visibility:hidden">
-          <img id = "picture5" style="visibility:hidden">
+          </div>
         </div>
+      </div>
+      <div class="row justify-content-center">
         <!-- nyt article search -->
-        <div class="col-md-5" id="nyt-col">
-        </div>
+        <div class="col-md-5" id="nyt-col"></div>
+        <!-- nyt movie review -->
+        <div class="col-md-5" id="movie-reviews">movie reviews</div>
       </div>
-      <div class="row">
-          <!-- nyt movie review -->
-          <div class="col-md-5" id="movie-reviews">
-            movie reviews
+      <div class="row justify-content-center">
+          <!-- giphy -->
+          <div class="col-md-6" id="giphy-col">
+            <img id = "picture1" style="visibility:hidden">
+            <img id = "picture2" style="visibility:hidden">
+            <img id = "picture3" style="visibility:hidden">
+            <img id = "picture4" style="visibility:hidden">
+            <img id = "picture5" style="visibility:hidden">
           </div>
+      </div>
           <!-- twitter -->
-          <div class="col-md-5" id="twitter-col">
-            twitter
-          </div>
+      <div class="row justify-content-center">
+          <div class="col-md-5" id="twitter-col">twitter</div>
       </div>
+    </div>
       <script src='script.js'></script>
 </body>
 </html>

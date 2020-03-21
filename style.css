@@ -30,9 +30,18 @@ h1 {
     font-family: 'Alfa Slab One';
 }
 
+#nyt-col{
+    font-family: 'Alfa Slab One';
+}
+
 #movie-reviews{
     background-color: rgb(240, 185, 114);
     margin:10px;
+    font-family: 'Alfa Slab One';
+}
+
+#twitter-col{
+    font-family: 'Alfa Slab One';
 }
 
 #giphy-col{
