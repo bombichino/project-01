@@ -1,19 +1,35 @@
 
 
+nyt_api_key ="YX7AqB8m3C8As3mPU2OpZWGifXMvQ2h1";
 
-///function
+// new york times article search function
 
-key ="YX7AqB8m3C8As3mPU2OpZWGifXMvQ2h1";
+function articleSearch(actor) {
+  console.log(actor);
+  actorNameSplit = actor.split(" ");
+  console.log(actorNameSplit);
+  actorName = "";
+  for (var i=0; i < actorNameSplit.length; i++) {
+      if (i>0) {
+      actorName += "+" + actorNameSplit;
+      }
+  }
 
-actor = "Robin Williams";
-actorNameSplit = actor.split(" ");
+  var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q="+ actorName + "&api-key=" + nyt_api_key;
 
-actorName = "";
-for (var i=0; i < actorNameSplit.length; i++) {
-    if (i>0) {
-    actorName += "+" + actorNameSplit;
-    }
+  $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function(response) {
+      $("#nyt-col").empty();
+      for (i=0; i<5;i++) {
+      $("#nyt-col").append(JSON.stringify(response.response.docs[i].abstract));  
+      $("#nyt-col").append("<br>"); 
+      $("#nyt-col").append("<br>"); 
+      }
+    });
 }
+
 
 var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q="+ actorName + "&api-key=" + key;
 
@@ -30,6 +46,7 @@ $.ajax({
   });
 
 //Pull Actor Names with OMDB API
+
   function MoviePull () {
     var title = $(".movieinput").val();
     console.log(title);
@@ -86,6 +103,7 @@ $.ajax({
 $("#movie-search").click(function() {
   MoviePull();
 });
+
 
 
 //Giphy pull functions (brings top 5 images to picture1-picture5 divs)
@@ -192,3 +210,16 @@ function ButtonPull5() {
   $("#picture5").attr("src",response.data[4].images.original.url);
   });
 }
+
+document.addEventListener('click', function(event) {
+  if (event.target.className.split(" ")[0] === "actorBtn") {
+    articleSearch(event.target.textContent);
+  //     var index = parseInt(event.target.parentElement.id);
+  //     scheduleObj.splice(parseInt(index), 1,event.target.parentElement.childNodes[3].value);
+  //     storePlan();
+  // };
+  // boxColor();
+  // renderSchedule();
+  }
+});
+
