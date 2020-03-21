@@ -1,6 +1,4 @@
-
-
-nyt_api_key ="YX7AqB8m3C8As3mPU2OpZWGifXMvQ2h1";
+var nyt_api_key ="YX7AqB8m3C8As3mPU2OpZWGifXMvQ2h1";
 
 // new york times article search function
 
@@ -30,25 +28,10 @@ function articleSearch(actor) {
     });
 }
 
-
-var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q="+ actorName + "&api-key=" + key;
-
-$.ajax({
-    url: queryURL,
-    method: "GET"
-  }).then(function(response) {
-
-    for (i=0; i<5;i++) {
-    $("#nyt-col").append(JSON.stringify(response.response.docs[i].abstract));  
-    $("#nyt-col").append("<br>"); 
-    $("#nyt-col").append("<br>"); 
-    }
-  });
-
 //Pull Actor Names with OMDB API
 
   function MoviePull () {
-    var title = $(".movieinput").val();
+    var title = $("#movieInput").val();
     console.log(title);
     var MovieQuery = "https://www.omdbapi.com/?t=" + title + "&apikey=d58d1281";
     console.log(MovieQuery);
@@ -98,12 +81,6 @@ $.ajax({
         };
     });
   };
-  
-
-$("#movie-search").click(function() {
-  MoviePull();
-});
-
 
 
 //Giphy pull functions (brings top 5 images to picture1-picture5 divs)
@@ -222,4 +199,8 @@ document.addEventListener('click', function(event) {
   // renderSchedule();
   }
 });
+
+document.getElementById("movieSearchBtn").addEventListener('click', function(event){
+  MoviePull();
+})
 
