@@ -38,7 +38,6 @@ function articleSearch(actor) {
       for (i=0; i<5;i++) {
         var article = $("<p>");
         article.text(JSON.parse(JSON.stringify(response.response.docs[i].abstract)));
-        
         $("#nyt-col").append(article);
       }
     });
@@ -51,7 +50,7 @@ function movieReview(actor) {
   actorName = actorNameSplitter(actor);
 
   var queryURL = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=" + actorName + "&api-key=" + nyt_api_key;
-
+  
   $.ajax({
     url: queryURL,
     method: "GET"
@@ -59,6 +58,7 @@ function movieReview(actor) {
 
     $("#movie-reviews").empty();
     $("#movie-reviews").append("<br>"); 
+    console.log(response);
     for (i=0; i<5;i++) {
   
     var review = $("<h6>");
@@ -79,8 +79,8 @@ function movieReview(actor) {
 
 //Pull Actor Names with OMDB API
 
-function MoviePull () {
-  var title = $("#movieinput").val();
+function moviePull () {
+  var title = $("#movieInput").val();
   console.log(title);
   var MovieQuery = "https://www.omdbapi.com/?t=" + title + "&apikey=d58d1281";
   console.log(MovieQuery);
@@ -133,8 +133,8 @@ function MoviePull () {
 
 
 //Giphy pull functions (brings top 5 images to picture1-picture5 divs)
-function Giphy(Search) {
-  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + Search + "&api_key=z6IvcDcCGQWaYNeWv3tfp3h19XDJ7V8C";
+function giphy(search) {
+  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + search + "&api_key=z6IvcDcCGQWaYNeWv3tfp3h19XDJ7V8C";
   $.ajax({
     url: queryURL,
     method: "GET"
@@ -152,37 +152,19 @@ function Giphy(Search) {
   });
 }
 
-
-document.addEventListener('click', function(event) {
-  if (event.target.className.split(" ")[0] === "actorBtn") {
-    articleSearch(event.target.textContent);
-    Giphy(event.target.textContent);
-  //     var index = parseInt(event.target.parentElement.id);
-  //     scheduleObj.splice(parseInt(index), 1,event.target.parentElement.childNodes[3].value);
-  //     storePlan();
-  // };
-  // boxColor();
-  // renderSchedule();
-  }
-});
-
 // event listeners
-
-$("#movie-search").click(function() {
-  moviePull();
-});
 
 document.addEventListener('click', function(event) {
   if (event.target.className.split(" ")[0] === "actorBtn") {
     var actor = event.target.textContent;
     articleSearch(actor);
     movieReview(actor);
-
+    giphy(event.target.textContent);
   }
 });
 
 document.getElementById("movieSearchBtn").addEventListener('click', function(event){
-  MoviePull();
+  moviePull();
 })
 
 
