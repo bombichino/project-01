@@ -88,7 +88,7 @@ $("#movie-search").click(function() {
 });
 
 document.addEventListener('click', function(event) {
-  if (event.target.className.split(" ")[2] === "actorBtn") {
+  if (event.target.className.split(" ")[0] === "actorBtn") {
     articleSearch(event.target.textContent);
   //     var index = parseInt(event.target.parentElement.id);
   //     scheduleObj.splice(parseInt(index), 1,event.target.parentElement.childNodes[3].value);
