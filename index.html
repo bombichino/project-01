@@ -11,7 +11,6 @@
     <script src="https://kit.fontawesome.com/cc6c724277.js" crossorigin="anonymous"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src='script.js'></script>
 </head>
 <body>
        
@@ -40,9 +39,9 @@
     <div class="container">
       <!-- search bar code -->
       <div class="row input-group" id="movie-search-bar" style="max-width: 500px;">
-        <input type="text" class="form-control">
+        <input type="text" class="form-control" id="movieInput">
         <div class="input-group-append">  
-          <span class="input-group-text" id="basic-addon2" id="movie-search">Search Movie Titles</span>
+          <button class="input-group-text" id="movieSearchBtn">Search Movie Titles</button>
         </div>
       </div>
       <!-- actor buttons -->
@@ -51,26 +50,10 @@
           <div class="container" id="actor-list" style="text-align: center;">
             <p id="actor-list-heading">Stan your pick:</p>
             <hr>
-          <!-- <button class="moviebutton" onclick="MoviePull()">MovieButton</button> -->
-          <!-- <input class="movieinput"> -->
-          <!-- <div id="movietitle"></div> -->
-          <!-- <button id = "actor1" style="visibility:hidden" onclick="ButtonPull1()"></button>
-              <button id = "actor2" style="visibility:hidden" onclick="ButtonPull2()"></button>
-              <button id = "actor3" style="visibility:hidden" onclick="ButtonPull3()"></button>
-              <button id = "actor4" style="visibility:hidden" onclick="ButtonPull4()"></button>
-              <button id = "actor5" style="visibility:hidden" onclick="ButtonPull5()"></button> -->
-          <button class="actorBtn btn btn-outline-secondary" id = "actor1">Robin Williams</button>
-          <hr>
-          <button class="actorBtn btn btn-outline-secondary" id = "actor2">Laura Dern</button>
-          <hr>
-          <button class="actorBtn btn btn-outline-secondary" id = "actor3">Betty White</button>
-          <hr>
-          <button class="actorBtn btn btn-outline-secondary" id = "actor4">Jeff Goldblum</button>
-          <hr>
-          <button class="actorBtn btn btn-outline-secondary" id = "actor5">Sarah Silverman</button>
-          <hr>
-          </div>
-        </div>
+              <button id = "actor1" style="visibility:hidden" onclick="ButtonPull1()"class="actorBtn btn btn-outline-secondary"></button>
+              <button id = "actor2" style="visibility:hidden" onclick="ButtonPull2()"class="actorBtn btn btn-outline-secondary"></button>
+              <button id = "actor3" style="visibility:hidden" onclick="ButtonPull3()"class="actorBtn btn btn-outline-secondary"></button>
+              <button id = "actor4" style="visibility:hidden" onclick="ButtonPull4()"class="actorBtn btn btn-outline-secondary"></button>
       </div>
       <div class="row">
         <!-- giphy -->
@@ -95,6 +78,6 @@
             twitter
           </div>
       </div>
-  
+      <script src='script.js'></script>
 </body>
 </html>

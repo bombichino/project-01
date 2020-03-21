@@ -1,7 +1,7 @@
-
 // new york times api key
 
-nyt_api_key ="YX7AqB8m3C8As3mPU2OpZWGifXMvQ2h1";
+var nyt_api_key ="YX7AqB8m3C8As3mPU2OpZWGifXMvQ2h1";
+
 
 // actor name splitter function
 
@@ -80,7 +80,7 @@ function movieReview(actor) {
 //Pull Actor Names with OMDB API
 
 function MoviePull () {
-  var title = $(".movieinput").val();
+  var title = $("#movieinput").val();
   console.log(title);
   var MovieQuery = "https://www.omdbapi.com/?t=" + title + "&apikey=d58d1281";
   console.log(MovieQuery);
@@ -130,7 +130,6 @@ function MoviePull () {
       };
   });
 };
-
 
 
 //Giphy pull functions (brings top 5 images to picture1-picture5 divs)
@@ -252,4 +251,8 @@ document.addEventListener('click', function(event) {
 
   }
 });
+
+document.getElementById("movieSearchBtn").addEventListener('click', function(event){
+  MoviePull();
+})
 
