@@ -1,0 +1,35 @@
+{
+  "name": "project-01",
+  "version": "1.0.0",
+  "description": "This is a test using twitter Apis ",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snovamo86861/project-01.git"
+  },
+  "keywords": [
+    "example",
+    "data",
+    "hashtags",
+    "actors",
+    "hollywood"
+  ],
+  "author": "Sandra Nova",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/snovamo86861/project-01/issues"
+  },
+  "homepage": "https://github.com/snovamo86861/project-01#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hashtag-count": "^1.1.0",
+    "node-fetch": "^2.6.0",
+    "serve-static": "^1.14.1",
+    "twit": "^2.2.11",
+    "twit-wrapper": "^1.0.5",
+    "twitter": "^1.7.1"
+  }
+}
